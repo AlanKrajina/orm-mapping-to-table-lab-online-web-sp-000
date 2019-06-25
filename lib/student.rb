@@ -19,6 +19,7 @@ class Student
   end
   
   def self.drop_table
+    sqlQuery =  "SELECT * FROM students  WHERE type = 'table'"
 
     DROP TABLE students;
 
