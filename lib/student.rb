@@ -19,10 +19,14 @@ class Student
   end
   
   def self.drop_table
-    db = SQLite3::Database.open "students.db"
-
-    db.execute "DROP TABLE IF EXISTS students"
-
+      sql =  <<-SQL 
+      CREATE TABLE IF NOT EXISTS students (
+        id INTEGER PRIMARY KEY, 
+        name TEXT, 
+        grade INTEGER
+        )
+        SQL
+    DB[:conn].execute(sql) 
   end
   
 end
