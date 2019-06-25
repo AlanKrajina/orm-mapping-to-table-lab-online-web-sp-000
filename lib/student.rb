@@ -27,11 +27,8 @@ class Student
   
   def save
           sql =  <<-SQL 
-      CREATE TABLE IF NOT EXISTS students (
-        id INTEGER PRIMARY KEY, 
-        name TEXT, 
-        grade INTEGER
-        )
+      INSERT INTO songs (name, album) 
+      VALUES (?, ?)
         SQL
     DB[:conn].execute(sql)   
     
