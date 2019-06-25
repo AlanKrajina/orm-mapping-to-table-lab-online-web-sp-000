@@ -22,6 +22,10 @@ class Student
     PRAGMA foreign_keys = OFF;
 
     DROP TABLE students;
+    UPDATE people
+    SET address_id = NULL;
+ 
+    PRAGMA foreign_keys = ON;
   end
   
 end
