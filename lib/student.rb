@@ -19,6 +19,8 @@ class Student
   end
   
   def self.drop_table
+    PRAGMA foreign_keys = OFF;
+
     DROP TABLE students;
   end
   
