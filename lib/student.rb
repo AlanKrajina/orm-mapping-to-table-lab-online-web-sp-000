@@ -21,7 +21,7 @@ class Student
   def self.drop_table
     db = SQLite3::Database.open "students.db"
 
-    sqlQuery = "DROP TABLE \"students\"";
+    db.execute "DROP TABLE IF EXISTS students"
 
   end
   
