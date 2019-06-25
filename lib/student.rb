@@ -19,7 +19,7 @@ class Student
   end
   
   def self.drop_table
-    sqlQuery =  "SELECT * FROM students  WHERE type = 'table'"
+    db = SQLite3::Database.open "test.db"
 
     sqlQuery = "DROP TABLE \"students\"";
 
